@@ -1,0 +1,505 @@
+fileFormatVersion: 2
+guid: a59394aab68844d198aaa980d93e4df6
+timeCreated: 1505471891
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Armature
+    100002: body
+    100004: body_target
+    100006: calf_l
+    100008: calf_r
+    100010: Cube
+    100012: Cube_001
+    100014: Cube_002
+    100016: Cube_003
+    100018: Cube_004
+    100020: Cube_005
+    100022: Cube_006
+    100024: Cube_007
+    100026: Cube_008
+    100028: foot_l
+    100030: foot_r
+    100032: gun_left
+    100034: gun_left_0
+    100036: gun_right
+    100038: gun_right_0
+    100040: hip
+    100042: leg_ik_ctrl_left
+    100044: leg_ik_ctrl_right
+    100046: pole_target_leg_left
+    100048: pole_target_leg_right
+    100050: thig_l
+    100052: thig_r
+    100054: //RootNode
+    400000: Armature
+    400002: body
+    400004: body_target
+    400006: calf_l
+    400008: calf_r
+    400010: Cube
+    400012: Cube_001
+    400014: Cube_002
+    400016: Cube_003
+    400018: Cube_004
+    400020: Cube_005
+    400022: Cube_006
+    400024: Cube_007
+    400026: Cube_008
+    400028: foot_l
+    400030: foot_r
+    400032: gun_left
+    400034: gun_left_0
+    400036: gun_right
+    400038: gun_right_0
+    400040: hip
+    400042: leg_ik_ctrl_left
+    400044: leg_ik_ctrl_right
+    400046: pole_target_leg_left
+    400048: pole_target_leg_right
+    400050: thig_l
+    400052: thig_r
+    400054: //RootNode
+    2300000: Cube
+    2300002: Cube_001
+    2300004: Cube_002
+    2300006: Cube_003
+    2300008: Cube_004
+    2300010: Cube_005
+    2300012: Cube_006
+    2300014: Cube_007
+    2300016: Cube_008
+    2300018: gun_left
+    2300020: gun_right
+    3300000: Cube
+    3300002: Cube_001
+    3300004: Cube_002
+    3300006: Cube_003
+    3300008: Cube_004
+    3300010: Cube_005
+    3300012: Cube_006
+    3300014: Cube_007
+    3300016: Cube_008
+    3300018: gun_left
+    3300020: gun_right
+    4300000: gun_right
+    4300002: gun_left
+    4300004: Cube_003
+    4300006: Cube_004
+    4300008: Cube_005
+    4300010: Cube_008
+    4300012: Cube_007
+    4300014: Cube_006
+    4300016: Cube_002
+    4300018: Cube_001
+    4300020: Cube
+    7400000: Default Take
+    7400002: idle
+    7400004: jump
+    7400006: walk
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/body_target
+        weight: 1
+      - path: Armature/hip
+        weight: 1
+      - path: Armature/hip/body
+        weight: 1
+      - path: Armature/hip/body/gun_left_0
+        weight: 1
+      - path: Armature/hip/body/gun_right_0
+        weight: 1
+      - path: Armature/hip/thig_l
+        weight: 1
+      - path: Armature/hip/thig_l/calf_l
+        weight: 1
+      - path: Armature/hip/thig_l/calf_l/foot_l
+        weight: 1
+      - path: Armature/hip/thig_r
+        weight: 1
+      - path: Armature/hip/thig_r/calf_r
+        weight: 1
+      - path: Armature/hip/thig_r/calf_r/foot_r
+        weight: 1
+      - path: Armature/leg_ik_ctrl_left
+        weight: 1
+      - path: Armature/leg_ik_ctrl_right
+        weight: 1
+      - path: Armature/pole_target_leg_left
+        weight: 1
+      - path: Armature/pole_target_leg_right
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      - path: Cube_002
+        weight: 1
+      - path: Cube_003
+        weight: 1
+      - path: Cube_004
+        weight: 1
+      - path: Cube_005
+        weight: 1
+      - path: Cube_006
+        weight: 1
+      - path: Cube_007
+        weight: 1
+      - path: Cube_008
+        weight: 1
+      - path: gun_left
+        weight: 1
+      - path: gun_right
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: idle
+      takeName: idle
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/body_target
+        weight: 1
+      - path: Armature/hip
+        weight: 1
+      - path: Armature/hip/body
+        weight: 1
+      - path: Armature/hip/body/gun_left_0
+        weight: 1
+      - path: Armature/hip/body/gun_right_0
+        weight: 1
+      - path: Armature/hip/thig_l
+        weight: 1
+      - path: Armature/hip/thig_l/calf_l
+        weight: 1
+      - path: Armature/hip/thig_l/calf_l/foot_l
+        weight: 1
+      - path: Armature/hip/thig_r
+        weight: 1
+      - path: Armature/hip/thig_r/calf_r
+        weight: 1
+      - path: Armature/hip/thig_r/calf_r/foot_r
+        weight: 1
+      - path: Armature/leg_ik_ctrl_left
+        weight: 1
+      - path: Armature/leg_ik_ctrl_right
+        weight: 1
+      - path: Armature/pole_target_leg_left
+        weight: 1
+      - path: Armature/pole_target_leg_right
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      - path: Cube_002
+        weight: 1
+      - path: Cube_003
+        weight: 1
+      - path: Cube_004
+        weight: 1
+      - path: Cube_005
+        weight: 1
+      - path: Cube_006
+        weight: 1
+      - path: Cube_007
+        weight: 1
+      - path: Cube_008
+        weight: 1
+      - path: gun_left
+        weight: 1
+      - path: gun_right
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: jump
+      takeName: jump
+      firstFrame: 0
+      lastFrame: 34
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/body_target
+        weight: 1
+      - path: Armature/hip
+        weight: 1
+      - path: Armature/hip/body
+        weight: 1
+      - path: Armature/hip/body/gun_left_0
+        weight: 1
+      - path: Armature/hip/body/gun_right_0
+        weight: 1
+      - path: Armature/hip/thig_l
+        weight: 1
+      - path: Armature/hip/thig_l/calf_l
+        weight: 1
+      - path: Armature/hip/thig_l/calf_l/foot_l
+        weight: 1
+      - path: Armature/hip/thig_r
+        weight: 1
+      - path: Armature/hip/thig_r/calf_r
+        weight: 1
+      - path: Armature/hip/thig_r/calf_r/foot_r
+        weight: 1
+      - path: Armature/leg_ik_ctrl_left
+        weight: 1
+      - path: Armature/leg_ik_ctrl_right
+        weight: 1
+      - path: Armature/pole_target_leg_left
+        weight: 1
+      - path: Armature/pole_target_leg_right
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      - path: Cube_002
+        weight: 1
+      - path: Cube_003
+        weight: 1
+      - path: Cube_004
+        weight: 1
+      - path: Cube_005
+        weight: 1
+      - path: Cube_006
+        weight: 1
+      - path: Cube_007
+        weight: 1
+      - path: Cube_008
+        weight: 1
+      - path: gun_left
+        weight: 1
+      - path: gun_right
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: walk
+      takeName: walk
+      firstFrame: 0
+      lastFrame: 49
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Armature
+        weight: 1
+      - path: Armature/body_target
+        weight: 1
+      - path: Armature/hip
+        weight: 1
+      - path: Armature/hip/body
+        weight: 1
+      - path: Armature/hip/body/gun_left_0
+        weight: 1
+      - path: Armature/hip/body/gun_right_0
+        weight: 1
+      - path: Armature/hip/thig_l
+        weight: 1
+      - path: Armature/hip/thig_l/calf_l
+        weight: 1
+      - path: Armature/hip/thig_l/calf_l/foot_l
+        weight: 1
+      - path: Armature/hip/thig_r
+        weight: 1
+      - path: Armature/hip/thig_r/calf_r
+        weight: 1
+      - path: Armature/hip/thig_r/calf_r/foot_r
+        weight: 1
+      - path: Armature/leg_ik_ctrl_left
+        weight: 1
+      - path: Armature/leg_ik_ctrl_right
+        weight: 1
+      - path: Armature/pole_target_leg_left
+        weight: 1
+      - path: Armature/pole_target_leg_right
+        weight: 1
+      - path: Cube
+        weight: 1
+      - path: Cube_001
+        weight: 1
+      - path: Cube_002
+        weight: 1
+      - path: Cube_003
+        weight: 1
+      - path: Cube_004
+        weight: 1
+      - path: Cube_005
+        weight: 1
+      - path: Cube_006
+        weight: 1
+      - path: Cube_007
+        weight: 1
+      - path: Cube_008
+        weight: 1
+      - path: gun_left
+        weight: 1
+      - path: gun_right
+        weight: 1
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
