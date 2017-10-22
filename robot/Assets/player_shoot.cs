@@ -5,8 +5,13 @@ using UnityEngine;
 public class player_shoot : MonoBehaviour {
 
 	public GameObject bulletPrefab;
+	public int currentGun = 0;
+
+
 	public float fireRate = 0.1f;
+	public float rpgFireRate = 55f;
 	private float nextFire = 0f;
+
 
 	public List<Transform> bulletSpawnList;
 	private int currentGunIndex = 0;
@@ -20,7 +25,14 @@ public class player_shoot : MonoBehaviour {
 	void Update () {
 		//when button is pressed
 		if (Input.GetKey (KeyCode.Mouse0)) {
-			FireGuns ();
+
+			if(currentGun == 1) {
+				Debug.Log("Shooting rocket");
+				FireRocketGuns();
+			} else {
+				FireMachineGuns ();
+				Debug.Log("Shooting Machine");
+			}
 		}
 	}
 
@@ -46,12 +58,37 @@ public class player_shoot : MonoBehaviour {
 //		}
 //	}
 
-	void FireGuns()
+	void FireMachineGuns()
 	{
 		//dont fire until certain time passed
 		if (Time.time > nextFire) {
 			//increase the timer for next fire
 			nextFire = Time.time + fireRate;
+
+			//instantiate a new bullet
+			var bullet = (GameObject)Instantiate (bulletPrefab, bulletSpawnList[currentGunIndex].position, bulletSpawnList[currentGunIndex].rotation);
+			//add force to bullet to send it flying
+			bullet.GetComponent<Rigidbody> ().AddForce (bullet.transform.forward * 75);
+			//destroy the bullet after 5 seconds
+			Destroy (bullet, 5.0f);
+
+			//select the next gun to shoot from
+			currentGunIndex++;
+
+			//check if there is a gun at this pos?
+			if (currentGunIndex >= bulletSpawnList.Count) {
+				//reset the gun index
+				currentGunIndex = 0;
+			}
+		}
+	}
+
+	void FireRocketGuns()
+	{
+		//dont fire until certain time passed
+		if (Time.time > nextFire) {
+			//increase the timer for next fire
+			nextFire = Time.time + rpgFireRate;
 
 			//instantiate a new bullet
 			var bullet = (GameObject)Instantiate (bulletPrefab, bulletSpawnList[currentGunIndex].position, bulletSpawnList[currentGunIndex].rotation);
