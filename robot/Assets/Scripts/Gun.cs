@@ -2,51 +2,29 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player_shoot : MonoBehaviour {
+public class Gun : MonoBehaviour {
 
+	//this is a base class for any typoe of gun
 	public GameObject bulletPrefab;
 	public float fireRate = 0.1f;
-	private float nextFire = 0f;
-
+	public float bulletForce = 75f;
 	public List<Transform> bulletSpawnList;
+
+
+	private float nextFire = 0f;
 	private int currentGunIndex = 0;
 
 	// Use this for initialization
 	void Start () {
-
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//when button is pressed
-		if (Input.GetKey (KeyCode.Mouse0)) {
-			FireGuns ();
-		}
+		
 	}
 
-//	void Fire() {
-//		//loop over all the fire points and create a bullet from them
-//		for (var i = 0; i < bulletSpawnList.Count; i++) {
-//			Transform bulletSpawn = bulletSpawnList [i];
-//
-//			if (Time.time > nextFire) {
-//				nextFire = Time.time + fireRate;
-//
-//				Debug.Log ("bullet POS: " + bulletSpawn.position);
-//
-//				var rotation = Quaternion.Euler (new Vector3 (bulletSpawn.rotation.x, bulletSpawn.rotation.y, bulletSpawn.rotation.z));
-//
-//				var bullet = (GameObject)Instantiate (bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
-//
-//				bullet.GetComponent<Rigidbody> ().AddForce (bullet.transform.forward * 50);
-//
-//				Destroy (bullet, 5.0f);
-//
-//			}
-//		}
-//	}
-
-	void FireGuns()
+	public void Fire()
 	{
 		//dont fire until certain time passed
 		if (Time.time > nextFire) {
@@ -56,7 +34,7 @@ public class player_shoot : MonoBehaviour {
 			//instantiate a new bullet
 			var bullet = (GameObject)Instantiate (bulletPrefab, bulletSpawnList[currentGunIndex].position, bulletSpawnList[currentGunIndex].rotation);
 			//add force to bullet to send it flying
-			bullet.GetComponent<Rigidbody> ().AddForce (bullet.transform.forward * 75);
+			bullet.GetComponent<Rigidbody> ().AddForce (bullet.transform.forward * bulletForce);
 			//destroy the bullet after 5 seconds
 			Destroy (bullet, 5.0f);
 
