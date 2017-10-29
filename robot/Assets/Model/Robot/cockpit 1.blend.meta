@@ -1,0 +1,124 @@
+fileFormatVersion: 2
+guid: 787e31867c8659d4996b66715326734e
+timeCreated: 1508922279
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: cockpit
+    100002: //RootNode
+    100004: cockpit_mounting
+    100006: exhaust_pipes
+    100008: fuel_cell
+    100010: fuel_line1
+    100012: fuel_line2
+    100014: jet_pack_assembly
+    100016: jetpack_fuel_line1
+    100018: jetpack_fuel_line2
+    400000: cockpit
+    400002: //RootNode
+    400004: cockpit_mounting
+    400006: exhaust_pipes
+    400008: fuel_cell
+    400010: fuel_line1
+    400012: fuel_line2
+    400014: jet_pack_assembly
+    400016: jetpack_fuel_line1
+    400018: jetpack_fuel_line2
+    2300000: cockpit
+    2300002: cockpit_mounting
+    2300004: exhaust_pipes
+    2300006: fuel_cell
+    2300008: fuel_line1
+    2300010: fuel_line2
+    2300012: jet_pack_assembly
+    2300014: jetpack_fuel_line1
+    2300016: jetpack_fuel_line2
+    3300000: cockpit
+    3300002: cockpit_mounting
+    3300004: exhaust_pipes
+    3300006: fuel_cell
+    3300008: fuel_line1
+    3300010: fuel_line2
+    3300012: jet_pack_assembly
+    3300014: jetpack_fuel_line1
+    3300016: jetpack_fuel_line2
+    4300000: exhaust_pipes
+    4300002: fuel_cell
+    4300004: jetpack_fuel_line2
+    4300006: jetpack_fuel_line1
+    4300008: fuel_line2
+    4300010: fuel_line1
+    4300012: jet_pack_assembly
+    4300014: cockpit_mounting
+    4300016: cockpit
+    7400000: Default Take
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
