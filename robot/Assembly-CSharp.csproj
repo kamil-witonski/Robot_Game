@@ -49,6 +49,7 @@
      <Compile Include="Assets\Bullet.cs" />
      <Compile Include="Assets\Enemy.cs" />
      <Compile Include="Assets\Scripts\Gun.cs" />
+     <Compile Include="Assets\Scripts\GunController.cs" />
      <Compile Include="Assets\Scripts\MachineGun.cs" />
      <Compile Include="Assets\Scripts\RPG.cs" />
      <Compile Include="Assets\enemy_patrol.cs" />
