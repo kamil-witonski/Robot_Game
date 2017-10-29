@@ -9,8 +9,6 @@ public class MachineGun : Gun {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.Mouse0)) {
-			Fire ();
-		}
+		
 	}
 }
