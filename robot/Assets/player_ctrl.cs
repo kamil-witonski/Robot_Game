@@ -79,23 +79,23 @@ public class player_ctrl : MonoBehaviour {
 	{
 		int moveSpeed = movementSpeed;
 
+		anim.speed = 1f;
+
 		//handle sprinting
 		if (Input.GetKey (KeyCode.LeftShift)) {
 			anim.speed = 3f;
 			moveSpeed = movementSpeed + 5;
 		}
 
-
 		//movement forward
 		if (Input.GetKey (KeyCode.W)) {
 			//animator params
 			anim.SetInteger ("speed", 1);
-			anim.speed = 1f;
 
 			//move position
 			transform.position += (transform.rotation * Vector3.left) * moveSpeed * Time.deltaTime;
 		}
-
+			
 		//movement back
 		if (Input.GetKey (KeyCode.S)) {
 			anim.SetInteger ("speed", -1);
@@ -105,12 +105,15 @@ public class player_ctrl : MonoBehaviour {
 		//robot rotation left, rotates the base of the model and the forward code handles the actual movement
 		if (Input.GetKey (KeyCode.A)) {
 			transform.rotation *= Quaternion.Euler (new Vector3 (0f, -robotRotationSpeed, 0f));
+			anim.SetInteger ("turning", 1);
 		}
 
 		//robot rotation right, rotates the base of the model and the forward code handles the actual movement
 		if (Input.GetKey (KeyCode.D)) {
 			transform.rotation *= Quaternion.Euler (new Vector3 (0f, robotRotationSpeed, 0f));
+			anim.SetInteger ("turning", -1);
 		}
+
 
 		//stop moving forward
 		if (Input.GetKeyUp (KeyCode.W)) {
@@ -120,10 +123,24 @@ public class player_ctrl : MonoBehaviour {
 		if (Input.GetKeyUp (KeyCode.S)) {
 			anim.SetInteger ("speed", 0);
 		}
+
+		if (Input.GetKeyUp (KeyCode.A)) {
+			anim.SetInteger ("turning", 0);
+		}
+
+		if (Input.GetKeyUp (KeyCode.D)) {
+			anim.SetInteger ("turning", 0);
+		}
 	}
 
 	void jump()
 	{
+		Debug.Log (isGrounded ());
+
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			Debug.Log ("Jumped");
+		}
+
 		//check if p;ayer is on the ground and if they pressed space
 		if (Input.GetKeyDown (KeyCode.Space) && isGrounded()) {
 			anim.SetBool ("jump", true);

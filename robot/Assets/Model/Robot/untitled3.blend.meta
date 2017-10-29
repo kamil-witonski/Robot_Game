@@ -1,7 +1,7 @@
 fileFormatVersion: 2
-guid: f4293366618fd314aaf1a7c07a0b7016
-timeCreated: 1508668352
-licenseType: Free
+guid: 47dedc93c752d0446b525ae34b557fa3
+timeCreated: 1507716150
+licenseType: Pro
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
@@ -187,14 +187,8 @@ ModelImporter:
     7400002: ArmatureAction
     7400004: IDLE_001
     7400006: shuffle_left
-    7400008: shuffle_left_001
-    7400010: shuffle_right
-    7400012: shuffle_right_001
-    7400014: shuffle_right_002
-    7400016: walk
-    7400018: walk_001
-    7400020: walk_002
-    7400022: walk_003
+    7400008: shuffle_right
+    7400010: walk
     9500000: //RootNode
     13700000: bottom_leg_shock_mount
     13700002: bottom_leg_shock_mount_001
@@ -352,9 +346,9 @@ ModelImporter:
         weight: 1
       - path: top_leg_mounting/leg_top_shock_track
         weight: 1
-      - path: top_leg_mounting/leg_top_shock_track_001
-        weight: 1
       - path: top_leg_mounting_001
+        weight: 1
+      - path: top_leg_mounting_001/leg_top_shock_track_001
         weight: 1
       - path: top_leg_side
         weight: 1
@@ -374,7 +368,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 1
+      loopTime: 0
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -482,9 +476,9 @@ ModelImporter:
         weight: 1
       - path: top_leg_mounting/leg_top_shock_track
         weight: 1
-      - path: top_leg_mounting/leg_top_shock_track_001
-        weight: 1
       - path: top_leg_mounting_001
+        weight: 1
+      - path: top_leg_mounting_001/leg_top_shock_track_001
         weight: 1
       - path: top_leg_side
         weight: 1
@@ -612,9 +606,9 @@ ModelImporter:
         weight: 1
       - path: top_leg_mounting/leg_top_shock_track
         weight: 1
-      - path: top_leg_mounting/leg_top_shock_track_001
-        weight: 1
       - path: top_leg_mounting_001
+        weight: 1
+      - path: top_leg_mounting_001/leg_top_shock_track_001
         weight: 1
       - path: top_leg_side
         weight: 1
@@ -624,8 +618,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: shuffle_left_001
-      takeName: shuffle_left_001
+      name: shuffle_left
+      takeName: shuffle_left
       firstFrame: 0
       lastFrame: 29
       wrapMode: 0
@@ -742,9 +736,9 @@ ModelImporter:
         weight: 1
       - path: top_leg_mounting/leg_top_shock_track
         weight: 1
-      - path: top_leg_mounting/leg_top_shock_track_001
-        weight: 1
       - path: top_leg_mounting_001
+        weight: 1
+      - path: top_leg_mounting_001/leg_top_shock_track_001
         weight: 1
       - path: top_leg_side
         weight: 1
@@ -872,9 +866,9 @@ ModelImporter:
         weight: 1
       - path: top_leg_mounting/leg_top_shock_track
         weight: 1
-      - path: top_leg_mounting/leg_top_shock_track_001
-        weight: 1
       - path: top_leg_mounting_001
+        weight: 1
+      - path: top_leg_mounting_001/leg_top_shock_track_001
         weight: 1
       - path: top_leg_side
         weight: 1
@@ -1002,9 +996,9 @@ ModelImporter:
         weight: 1
       - path: top_leg_mounting/leg_top_shock_track
         weight: 1
-      - path: top_leg_mounting/leg_top_shock_track_001
-        weight: 1
       - path: top_leg_mounting_001
+        weight: 1
+      - path: top_leg_mounting_001/leg_top_shock_track_001
         weight: 1
       - path: top_leg_side
         weight: 1
