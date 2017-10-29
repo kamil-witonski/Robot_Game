@@ -1,13 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\enemy_patrol.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\player_ctrl.cs">
     <Files>
-      <File FileName="Assets\player_ctrl.cs" Line="1" Column="1" />
-      <File FileName="Assets\player_shoot.cs" Line="55" Column="4" />
-      <File FileName="Assets\enemy_patrol.cs" Line="58" Column="2" />
-      <File FileName="Assets\machine_gun_bullet.cs" Line="8" Column="17" />
-      <File FileName="Assets\Enemy.cs" Line="28" Column="2" />
-      <File FileName="Assets\Bullet.cs" Line="25" Column="35" />
+      <File FileName="Assets\player_ctrl.cs" Line="124" Column="33" />
+      <File FileName="Assets\player_shoot.cs" Line="1" Column="1" />
+      <File FileName="Assets\enemy_patrol.cs" Line="1" Column="1" />
+      <File FileName="Assets\machine_gun_bullet.cs" Line="1" Column="1" />
+      <File FileName="Assets\Enemy.cs" Line="1" Column="1" />
+      <File FileName="Assets\Bullet.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
