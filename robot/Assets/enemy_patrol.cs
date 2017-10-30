@@ -92,7 +92,7 @@ public class enemy_patrol : MonoBehaviour {
 		var direction = player.transform.position - transform.position;
 
 		//add force to bullet to send it flying
-		bullet.GetComponent<Rigidbody> ().AddForce (direction * 75);
+		bullet.GetComponent<Rigidbody> ().AddForce (direction * 155);
 		//destroy the bullet after 5 seconds
 		Destroy (bullet, 5.0f);
 	}
