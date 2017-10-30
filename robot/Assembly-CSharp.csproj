@@ -52,11 +52,16 @@
      <Compile Include="Assets\Scripts\GunController.cs" />
      <Compile Include="Assets\Scripts\MachineGun.cs" />
      <Compile Include="Assets\Scripts\RPG.cs" />
+     <Compile Include="Assets\Scripts\RPG_Rocket.cs" />
      <Compile Include="Assets\enemy_patrol.cs" />
      <Compile Include="Assets\player_ctrl.cs" />
      <Compile Include="Assets\player_shoot.cs" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
+     <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
      <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
+     <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
