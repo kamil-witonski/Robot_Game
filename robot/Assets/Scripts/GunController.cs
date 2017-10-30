@@ -16,10 +16,13 @@ public class GunController : MonoBehaviour {
 	public List<Transform> locations = new List<Transform>();
 
 
+	private float nextFire = 0;
+
 	// Use this for initialization
 	void Start () {
 		//add machine gun
 
+		// loop over the weapons list and load them up
 		for(var i = 0; i < weapons.Count; i++) {
 
 			var pairs = new List<Gun>();
@@ -37,6 +40,9 @@ public class GunController : MonoBehaviour {
 			gunsTest.Add(pairs);
 		}
 
+
+		Debug.Log(gunsTest[0][0]);
+
 	}
 	
 	// Update is called once per frame
@@ -47,11 +53,83 @@ public class GunController : MonoBehaviour {
 			// 	gun.Fire();
 			// }
 
+			var fireRate = gunsTest[currentGunIndex][currentFireSide].fireRate / 2;
+
+
+			if(Time.time > nextFire) {
+				nextFire = Time.time + fireRate;
+
+				currentFireSide = (currentFireSide== 0) ? 1 : 0;	
+			}
+
 			gunsTest[currentGunIndex][currentFireSide].Fire();
 
-			currentFireSide = (currentFireSide== 0) ? 1 : 0;
 			Debug.Log("Currenst Side FIre" + currentFireSide);
 		}
+
+
+
+
+
+
+
+
+
+// if (Time.time > nextFire) {
+// 			//increase the timer for next fire
+// 			nextFire = Time.time + fireRate;
+
+// 			//instantiate a new bullet
+// 			var bullet = (GameObject)Instantiate (bulletPrefab, bulletSpawnList[currentGunIndex].position, bulletSpawnList[currentGunIndex].rotation);
+// 			//add force to bullet to send it flying
+// 			bullet.GetComponent<Rigidbody> ().AddForce (bullet.transform.forward * bulletForce);
+// 			//destroy the bullet after 5 seconds
+// 			Destroy (bullet, 5.0f);
+
+// 			//play audio clip at position
+// 			AudioSource.PlayClipAtPoint(fire_sound, transform.position);
+
+// 			//select the next gun to shoot from
+// 			currentGunIndex++;
+
+// 			//check if there is a gun at this pos?
+// 			if (currentGunIndex >= bulletSpawnList.Count) {
+// 				//reset the gun index
+// 				currentGunIndex = 0;
+// 			}
+// 		}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		if (Input.GetKeyDown (KeyCode.Mouse1)) {
 			Debug.Log("Gun number: " + gunsTest.Count);
