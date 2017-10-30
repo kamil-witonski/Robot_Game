@@ -28,6 +28,7 @@ public class GunController : MonoBehaviour {
 				GameObject obj = (GameObject) Instantiate(weapons[i], child.transform.position, child.transform.rotation);
 
 				obj.transform.parent = child.transform;
+				obj.transform.localScale = new Vector3(5f, 5f, 5f);
 				
 				// guns.Add(obj.GetComponent<Gun>());
 				pairs.Add(obj.GetComponent<Gun>());
