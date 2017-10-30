@@ -9,6 +9,7 @@ public class Gun : MonoBehaviour {
 	public float fireRate = 0.1f;
 	public float bulletForce = 75f;
 	public List<Transform> bulletSpawnList;
+	public AudioClip fire_sound;
 
 
 	private float nextFire = 0f;
@@ -37,6 +38,9 @@ public class Gun : MonoBehaviour {
 			bullet.GetComponent<Rigidbody> ().AddForce (bullet.transform.forward * bulletForce);
 			//destroy the bullet after 5 seconds
 			Destroy (bullet, 5.0f);
+
+			//play audio clip at position
+			AudioSource.PlayClipAtPoint(fire_sound, transform.position);
 
 			//select the next gun to shoot from
 			currentGunIndex++;
