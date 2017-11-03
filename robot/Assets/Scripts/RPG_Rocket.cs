@@ -5,6 +5,7 @@ using UnityEngine;
 public class RPG_Rocket : MonoBehaviour {
 
 	public AudioClip explosionSound;
+	public int damageValue;
 
 	void Explosion()
 	{
@@ -13,6 +14,23 @@ public class RPG_Rocket : MonoBehaviour {
 
 		var rend = GetComponent<Renderer>();
 		rend.enabled = false;
+
+		Collider[] hitColliders = Physics.OverlapSphere (transform.position, 10f);
+		int i = 0;
+
+		while (i < hitColliders.Length) {
+
+			Debug.Log (hitColliders [i].tag);
+
+			if (hitColliders [i].tag == "enemy") {
+				Debug.Log ("Explosion hit kill ududde");
+
+				var enemy = hitColliders [i].gameObject.GetComponent<Enemy> ();
+				enemy.TakeDamage (damageValue);
+
+			}
+			i++;
+		}
 
 		AudioSource.PlayClipAtPoint(explosionSound, transform.position);
 
