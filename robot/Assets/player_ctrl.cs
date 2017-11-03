@@ -18,6 +18,8 @@ public class player_ctrl : MonoBehaviour {
 	public float jetPackFuelMax = 1000f;
 	public float jetPackFuelReplenishRate = 0.5f;
 
+	public GameObject jetPackFlamesGO;
+
 	//references to components
 	private Animator anim;
 	private Rigidbody rigid;
@@ -135,7 +137,7 @@ public class player_ctrl : MonoBehaviour {
 
 	void jump()
 	{
-		Debug.Log (isGrounded ());
+		//Debug.Log (isGrounded ());
 
 		if (Input.GetKeyDown (KeyCode.Space)) {
 			Debug.Log ("Jumped");
@@ -173,12 +175,34 @@ public class player_ctrl : MonoBehaviour {
 			rigid.AddForce (Vector3.up * 12000);
 			//do fuel calculation
 			jetPackFuel -= 10;
+
+
+			jetPackFlames (true);
+
+
 		} else {
 			//if we not using the jet pack replenish the fuel
 			if (jetPackFuel < jetPackFuelMax) {
 				jetPackFuel += jetPackFuelReplenishRate;
 			}
+
+			jetPackFlames (false);
 		}
+	}
+
+	void jetPackFlames(bool onoff)
+	{
+		foreach (Transform trans in jetPackFlamesGO.transform) {
+
+			var sys = trans.gameObject.GetComponent<ParticleSystem> ();
+			Debug.Log (sys);
+			if (onoff) {
+				sys.Play ();
+			} else {
+				sys.Stop ();
+			}
+		}
+
 	}
 
 	//fire a ray cast to check if there is ground beneith the player
