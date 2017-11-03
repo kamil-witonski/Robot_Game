@@ -14,6 +14,7 @@ public class GunController : MonoBehaviour {
 	public int currentFireSide = 0;
 
 	public List<Transform> locations = new List<Transform>();
+	public Transform aimTarget;
 
 
 	private float nextFire = 0;
@@ -32,9 +33,17 @@ public class GunController : MonoBehaviour {
 
 				obj.transform.parent = child.transform;
 				obj.transform.localScale = new Vector3(5f, 5f, 5f);
-				
+
+				var gun = obj.GetComponent<Gun> ();
+
 				// guns.Add(obj.GetComponent<Gun>());
-				pairs.Add(obj.GetComponent<Gun>());
+				pairs.Add(gun);
+
+				//gun.lookAtTarget = aimTarget;
+
+
+
+
 			}	
 
 			gunsTest.Add(pairs);
