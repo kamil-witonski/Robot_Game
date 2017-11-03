@@ -11,17 +11,14 @@ public class Gun : MonoBehaviour {
 	public List<Transform> bulletSpawnList;
 	public AudioClip fire_sound;
 
+	public Transform lookAtTarget = null;
+
 
 	private float nextFire = 0f;
 	private int currentGunIndex = 0;
 
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
 		
 	}
 
