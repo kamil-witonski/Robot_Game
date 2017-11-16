@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\PulseCanon.cs" />
      <Compile Include="Assets\Scripts\RPG.cs" />
      <Compile Include="Assets\Scripts\RPG_Rocket.cs" />
+     <Compile Include="Assets\Scripts\RadioManager.cs" />
      <Compile Include="Assets\enemy_patrol.cs" />
      <Compile Include="Assets\player_ctrl.cs" />
      <Compile Include="Assets\player_shoot.cs" />
