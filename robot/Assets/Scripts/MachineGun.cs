@@ -6,6 +6,7 @@ public class MachineGun : Gun {
 
 	// public float fireRate;
 	// public float bulletForce;
-	
-
+	void Start() {
+		this.wepID = 1;
+	}
 }

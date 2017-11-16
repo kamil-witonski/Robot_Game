@@ -4,4 +4,8 @@ using UnityEngine;
 
 public class RPG : Gun {
 
+	void Start() {
+		this.wepID = 2;
+
+	}
 }

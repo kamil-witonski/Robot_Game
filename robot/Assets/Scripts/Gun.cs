@@ -12,6 +12,7 @@ public class Gun : MonoBehaviour {
 	public AudioClip fire_sound;
 
 	public Transform lookAtTarget = null;
+	public int wepID;
 
 
 	private float nextFire = 0f;

@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class GunController : MonoBehaviour {
 
-
+	//aviable weapons
 	public List<GameObject> weapons = new List<GameObject>(); 
+
+	//user specific weapon set up
+	public List<GameObject> userWeapons = new List<GameObject> ();
 
 	public List<Gun> guns = new List<Gun>();
 	public List<List<Gun>> gunsTest = new List<List<Gun>>();
@@ -24,7 +27,7 @@ public class GunController : MonoBehaviour {
 		//add machine gun
 
 		// loop over the weapons list and load them up
-		for(var i = 0; i < weapons.Count; i++) {
+		for(var i = 0; i < 3; i++) {
 
 			var pairs = new List<Gun>();
 
@@ -62,8 +65,8 @@ public class GunController : MonoBehaviour {
 			// 	gun.Fire();
 			// }
 
-			var fireRate = gunsTest[currentGunIndex][currentFireSide].fireRate / 2;
 
+			var fireRate = gunsTest[currentGunIndex][currentFireSide].fireRate / 2;
 
 			if(Time.time > nextFire) {
 				nextFire = Time.time + fireRate;
@@ -107,31 +110,6 @@ public class GunController : MonoBehaviour {
 // 				currentGunIndex = 0;
 // 			}
 // 		}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

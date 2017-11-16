@@ -6,6 +6,13 @@ public class RPG_Rocket : MonoBehaviour {
 
 	public AudioClip explosionSound;
 	public int damageValue;
+	public bool use_particle;
+	public ParticleSystem particles;
+
+	void Start() {
+		
+	}
+
 
 	void Explosion()
 	{
@@ -37,6 +44,13 @@ public class RPG_Rocket : MonoBehaviour {
 		//particl system
 		var explosion = GetComponent<ParticleSystem>();
 		explosion.Play();
+
+		if (use_particle) {
+			var part = Instantiate (particles, transform.position, transform.rotation);
+			part.Play ();
+		}
+
+
 		Destroy(gameObject, explosion.duration);
 	}
 
