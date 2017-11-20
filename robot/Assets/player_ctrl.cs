@@ -64,7 +64,7 @@ public class player_ctrl : MonoBehaviour {
 		pitch += aimSpeed * Input.GetAxis ("Mouse Y");
 
 		float finalPitch = pitch;
-		//Debug.Log("finalPitch" + finalPitch);
+		// //Debug.Log("finalPitch" + finalPitch);
 
 		//limit the cabin rotation on z axis
 		if (pitch > 20f) {
@@ -137,10 +137,10 @@ public class player_ctrl : MonoBehaviour {
 
 	void jump()
 	{
-		//Debug.Log (isGrounded ());
+		// //Debug.Log (isGrounded ());
 
 		if (Input.GetKeyDown (KeyCode.Space)) {
-			Debug.Log ("Jumped");
+			//Debug.Log ("Jumped");
 		}
 
 		//check if p;ayer is on the ground and if they pressed space
@@ -195,7 +195,7 @@ public class player_ctrl : MonoBehaviour {
 		foreach (Transform trans in jetPackFlamesGO.transform) {
 
 			var sys = trans.gameObject.GetComponent<ParticleSystem> ();
-			Debug.Log (sys);
+			//Debug.Log (sys);
 			if (onoff) {
 				sys.Play ();
 			} else {
