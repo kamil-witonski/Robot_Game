@@ -19,6 +19,8 @@ public class GunController : MonoBehaviour {
 	public List<Transform> locations = new List<Transform>();
 	public Transform aimTarget;
 
+	public bool isAllowedToFire;
+
 
 	private float nextFire = 0;
 
@@ -59,7 +61,7 @@ public class GunController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKey (KeyCode.Mouse0)) {
+		if (Input.GetKey (KeyCode.Mouse0) && isAllowedToFire) {
 
 			// foreach(Gun gun in gunsTest[currentGunIndex]) {
 			// 	gun.Fire();
