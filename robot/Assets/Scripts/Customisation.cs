@@ -91,7 +91,7 @@ public class Customisation : MonoBehaviour {
 
 		// to_delete.ForEach (child => Destroy (child));
 
-
+		var count = 0;
 		foreach(Transform location in locators) {
 
 			//add the new bumper based on an index
@@ -100,6 +100,13 @@ public class Customisation : MonoBehaviour {
 
 			new_part.transform.parent = location;
 			new_part.transform.localRotation = Quaternion.Euler (-90, 0, 0);
+
+
+			if(count == 1) {
+				new_part.transform.localScale = new Vector3(new_part.transform.localScale.x, new_part.transform.localScale.y * -1, new_part.transform.localScale.z);
+			}
+
+			count++;
 
 			// return new_part;
 
