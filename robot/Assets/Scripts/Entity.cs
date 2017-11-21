@@ -3,16 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Entity : MonoBehaviour {
+	public float maxHealth = 100f;
+	public float health = 100f;
 
-	public int health = 100;
+	void Start(){
+		maxHealth = health;
+	}
 
 	public virtual void Die(){}
 
-	public void TakeDamage(int damagePoints) {
+	public virtual void TakeDamage(int damagePoints) {
 		health -= damagePoints;
 
-
-		if (health <= 0) {
+		if (health <= 0f) {
 			Die();
 		}
 	}
