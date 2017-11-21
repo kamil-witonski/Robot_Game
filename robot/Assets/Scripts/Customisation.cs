@@ -6,12 +6,16 @@ public class Customisation : MonoBehaviour {
 	public List<GameObject> topLegParts = new List<GameObject>();
 	public List<Transform> topLegLocators = new List<Transform>();
 
+	public List<GameObject> bottomLegParts = new List<GameObject>();
+	public List<Transform> bottomLegLocators = new List<Transform>();
+
 	public List<GameObject> bodyParts = new List<GameObject>();
 	public List<Transform> bodyLocators = new List<Transform>();
 
 
 	public int currentBodyIndex = 0;
 	public int currentTopLegIndex = 0;
+	public int currentBottomLegIndex = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -40,7 +44,27 @@ public class Customisation : MonoBehaviour {
 			changePart(topLegLocators, topLegParts[currentTopLegIndex]);
 		}
 
+		if (Input.GetKeyDown (KeyCode.O)) {
+			currentBottomLegIndex = changeIndex(1, bottomLegParts.Count, currentBottomLegIndex);
+			changePart(bottomLegLocators, bottomLegParts[currentBottomLegIndex]);
+		}
+
 		Debug.Log(currentTopLegIndex);
+	}
+
+	public void BodyArmourBtnClick(int dir) {
+		currentBodyIndex = changeIndex(dir, bodyParts.Count, currentBodyIndex);
+		changePart(bodyLocators, bodyParts[currentBodyIndex]);
+	}
+
+	public void TopLegArmourBtnClick(int dir) {
+		currentTopLegIndex = changeIndex(dir, topLegParts.Count, currentTopLegIndex);
+			changePart(topLegLocators, topLegParts[currentTopLegIndex]);
+	}
+
+	public void BottomLegArmourBtnClick(int dir) {
+		currentBottomLegIndex = changeIndex(dir, bottomLegParts.Count, currentBottomLegIndex);
+		changePart(bottomLegLocators, bottomLegParts[currentBottomLegIndex]);
 	}
 
 	int changeIndex(int direction, int max, int currentIndex) {
