@@ -1,0 +1,244 @@
+fileFormatVersion: 2
+guid: 9184392892af99e449d28edfa9f6068d
+timeCreated: 1517394589
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: button_consle
+    100002: center_panel
+    100004: cockpit
+    100006: cockpit_inside
+    100008: cockpit_mount
+    100010: cockpit_mounting
+    100012: //RootNode
+    100014: Cube
+    100016: Cube.001
+    100018: Cube.002
+    100020: Cube.003
+    100022: Cube.004
+    100024: Cube.005
+    100026: Cube.006
+    100028: Cube.007
+    100030: Cube.008
+    100032: Cube.009
+    100034: Cube.010
+    100036: Cube.011
+    100038: Cube.012
+    100040: Cube.013
+    100042: Cube.014
+    100044: Cube.015
+    100046: Cube.016
+    100048: exhaust_pipes
+    100050: fuel_cell
+    100052: fuel_line1
+    100054: fuel_line2
+    100056: jet_pack_assembly
+    100058: jetpack_fuel_line1
+    100060: jetpack_fuel_line2
+    100062: joystick
+    100064: joystick.001
+    100066: side_panels
+    400000: button_consle
+    400002: center_panel
+    400004: cockpit
+    400006: cockpit_inside
+    400008: cockpit_mount
+    400010: cockpit_mounting
+    400012: //RootNode
+    400014: Cube
+    400016: Cube.001
+    400018: Cube.002
+    400020: Cube.003
+    400022: Cube.004
+    400024: Cube.005
+    400026: Cube.006
+    400028: Cube.007
+    400030: Cube.008
+    400032: Cube.009
+    400034: Cube.010
+    400036: Cube.011
+    400038: Cube.012
+    400040: Cube.013
+    400042: Cube.014
+    400044: Cube.015
+    400046: Cube.016
+    400048: exhaust_pipes
+    400050: fuel_cell
+    400052: fuel_line1
+    400054: fuel_line2
+    400056: jet_pack_assembly
+    400058: jetpack_fuel_line1
+    400060: jetpack_fuel_line2
+    400062: joystick
+    400064: joystick.001
+    400066: side_panels
+    2300000: button_consle
+    2300002: center_panel
+    2300004: cockpit
+    2300006: cockpit_inside
+    2300008: cockpit_mount
+    2300010: cockpit_mounting
+    2300012: Cube
+    2300014: Cube.001
+    2300016: Cube.002
+    2300018: Cube.003
+    2300020: Cube.004
+    2300022: Cube.005
+    2300024: Cube.006
+    2300026: Cube.007
+    2300028: Cube.008
+    2300030: Cube.009
+    2300032: Cube.010
+    2300034: Cube.011
+    2300036: Cube.012
+    2300038: Cube.013
+    2300040: Cube.014
+    2300042: Cube.015
+    2300044: Cube.016
+    2300046: exhaust_pipes
+    2300048: fuel_cell
+    2300050: fuel_line1
+    2300052: fuel_line2
+    2300054: jet_pack_assembly
+    2300056: jetpack_fuel_line1
+    2300058: jetpack_fuel_line2
+    2300060: joystick
+    2300062: joystick.001
+    2300064: side_panels
+    3300000: button_consle
+    3300002: center_panel
+    3300004: cockpit
+    3300006: cockpit_inside
+    3300008: cockpit_mount
+    3300010: cockpit_mounting
+    3300012: Cube
+    3300014: Cube.001
+    3300016: Cube.002
+    3300018: Cube.003
+    3300020: Cube.004
+    3300022: Cube.005
+    3300024: Cube.006
+    3300026: Cube.007
+    3300028: Cube.008
+    3300030: Cube.009
+    3300032: Cube.010
+    3300034: Cube.011
+    3300036: Cube.012
+    3300038: Cube.013
+    3300040: Cube.014
+    3300042: Cube.015
+    3300044: Cube.016
+    3300046: exhaust_pipes
+    3300048: fuel_cell
+    3300050: fuel_line1
+    3300052: fuel_line2
+    3300054: jet_pack_assembly
+    3300056: jetpack_fuel_line1
+    3300058: jetpack_fuel_line2
+    3300060: joystick
+    3300062: joystick.001
+    3300064: side_panels
+    4300000: joystick.001
+    4300002: Cube.016
+    4300004: Cube.003
+    4300006: button_consle
+    4300008: Cube.007
+    4300010: Cube.006
+    4300012: Cube.005
+    4300014: Cube.004
+    4300016: Cube.008
+    4300018: Cube.010
+    4300020: Cube.013
+    4300022: Cube.011
+    4300024: Cube.009
+    4300026: Cube.014
+    4300028: Cube.015
+    4300030: Cube.012
+    4300032: Cube
+    4300034: side_panels
+    4300036: joystick
+    4300038: Cube.002
+    4300040: Cube.001
+    4300042: center_panel
+    4300044: cockpit_mount
+    4300046: cockpit_inside
+    4300048: exhaust_pipes
+    4300050: fuel_cell
+    4300052: jetpack_fuel_line2
+    4300054: jetpack_fuel_line1
+    4300056: fuel_line2
+    4300058: fuel_line1
+    4300060: jet_pack_assembly
+    4300062: cockpit_mounting
+    4300064: cockpit
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
