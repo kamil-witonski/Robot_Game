@@ -6,11 +6,13 @@ using UnityEngine.UI;
 public class Player : Entity {
 
 	public Slider healthBar;
+    public ForceField forceField;
 
 	// Use this for initialization
 	void Start () {
 		healthBar.value = CalculateHealth();
-	}
+        //forceField = transform.root.GetComponent<ForceField>();
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -24,6 +26,12 @@ public class Player : Entity {
 	}
 
 	public override void TakeDamage(int damagePoints) {
+        //prevent damage if force field is active
+        if(forceField.activated)
+        {
+            return;
+        }
+
 		health -= damagePoints;
 
 		healthBar.value = CalculateHealth();
