@@ -19,7 +19,13 @@ public class Customisation : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		//build the robot
+		changePart(topLegLocators, topLegParts[PlayerPrefs.GetInt("armour_top_leg")]);
+		changePart(bodyLocators, bodyParts[PlayerPrefs.GetInt("armour_body")]);
+		changePart(bottomLegLocators, bottomLegParts[PlayerPrefs.GetInt("armour_bottom_leg")]);
+
+
+
 	}
 	
 	// Update is called once per frame
@@ -55,19 +61,27 @@ public class Customisation : MonoBehaviour {
 	public void BodyArmourBtnClick(int dir) {
 		currentBodyIndex = changeIndex(dir, bodyParts.Count, currentBodyIndex);
 		changePart(bodyLocators, bodyParts[currentBodyIndex]);
+
+		//save the choice
+		PlayerPrefs.SetInt("armour_body", currentBodyIndex);
 	}
 
 	public void TopLegArmourBtnClick(int dir) {
 		currentTopLegIndex = changeIndex(dir, topLegParts.Count, currentTopLegIndex);
-			changePart(topLegLocators, topLegParts[currentTopLegIndex]);
+		changePart(topLegLocators, topLegParts[currentTopLegIndex]);
+
+		PlayerPrefs.SetInt ("armour_top_leg", currentTopLegIndex);
 	}
 
 	public void BottomLegArmourBtnClick(int dir) {
 		currentBottomLegIndex = changeIndex(dir, bottomLegParts.Count, currentBottomLegIndex);
 		changePart(bottomLegLocators, bottomLegParts[currentBottomLegIndex]);
+		PlayerPrefs.SetInt ("armour_bottom_leg", currentBottomLegIndex);
 	}
 
 	int changeIndex(int direction, int max, int currentIndex) {
+
+		Debug.Log ("index: " + currentIndex);
 
 		if (direction == 1) {
 			currentIndex++;

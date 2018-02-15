@@ -1,21 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GunController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\player_ctrl.cs">
     <Files>
-      <File FileName="Assets\player_ctrl.cs" Line="186" Column="44" />
       <File FileName="Assets\player_shoot.cs" Line="1" Column="1" />
       <File FileName="Assets\enemy_patrol.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Enemy.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Entity.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MachineGun.cs" Line="8" Column="30" />
-      <File FileName="Assets\Scripts\RPG_Rocket.cs" Line="49" Column="78" />
-      <File FileName="Assets\Scripts\Bullet.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gun.cs" Line="15" Column="18" />
-      <File FileName="Assets\Scripts\RPG.cs" Line="5" Column="23" />
-      <File FileName="Assets\Scripts\PulseCanon.cs" Line="11" Column="2" />
-      <File FileName="Assets\Scripts\GranadeLauncher.cs" Line="17" Column="1" />
-      <File FileName="Assets\Scripts\GunController.cs" Line="30" Column="23" />
+      <File FileName="Assets\Scripts\Player.cs" Line="4" Column="1" />
+      <File FileName="Assets\Scripts\ForceField.cs" Line="64" Column="40" />
+      <File FileName="Assets\Scripts\GunController.cs" Line="70" Column="4" />
+      <File FileName="Assets\player_ctrl.cs" Line="131" Column="92" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
