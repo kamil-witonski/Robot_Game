@@ -1,18 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ForceField : MonoBehaviour {
 
     public GameObject forceField;
     public bool activated = false;
 
+	public float maximum_shield = 200f;
     public float total_resistance = 200f;
     public float drain_rate = 0.5f;
     public float replenish_rate = 1f;
 
     public Vector3 maxSize = new Vector3(40f, 40f, 40f);
     public Vector3 minSize = new Vector3(0f, 0f, 0f);
+
+	public Slider shieldBar;
 
     private bool isScaling = false;
 
@@ -57,18 +61,20 @@ public class ForceField : MonoBehaviour {
                 StartCoroutine(ScaleOverTime(0.5f, minSize));
             }
 
-            if(total_resistance <= 100f)
+			if(total_resistance < maximum_shield)
             {
                 total_resistance += replenish_rate;
             }
             //this.transform.localScale = minSize;
         }
-
-
-
-
-
+	
+		shieldBar.value = calculateForceField ();
     }
+
+	float calculateForceField()
+	{
+		return total_resistance / maximum_shield;
+	}
 
     IEnumerator ScaleOverTime(float time, Vector3 finalSize)
     {
