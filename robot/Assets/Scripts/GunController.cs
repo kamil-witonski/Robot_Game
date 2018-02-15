@@ -29,7 +29,7 @@ public class GunController : MonoBehaviour {
 		//add machine gun
 
 		// loop over the weapons list and load them up
-		for(var i = 0; i < 3; i++) {
+		for(var i = 0; i < numberOfGuns; i++) {
 
 			var pairs = new List<Gun>();
 
