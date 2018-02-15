@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class player_ctrl : MonoBehaviour {
 
@@ -17,6 +18,7 @@ public class player_ctrl : MonoBehaviour {
 	public float jetPackFuel = 1000f;
 	public float jetPackFuelMax = 1000f;
 	public float jetPackFuelReplenishRate = 0.5f;
+	public Slider jetPackBar;
 
 	public GameObject jetPackFlamesGO;
 
@@ -36,6 +38,9 @@ public class player_ctrl : MonoBehaviour {
 	private float groundDistance = 0.5f;
 	private float groundedTimerMax = 1f;
 	private float groundedTimer = 0f;
+
+	public Image UIrobotPos;
+	public Image UIrobotBottomPos;
 
 	// Use this for initialization
 	void Start () {
@@ -75,6 +80,10 @@ public class player_ctrl : MonoBehaviour {
 			
 		//apply the calculation to the acutal object
 		objectToAim.transform.eulerAngles = new Vector3 (0, yaw, finalPitch * -1);
+
+		Debug.Log ("YAW" + yaw);
+
+		UIrobotPos.transform.eulerAngles = new Vector3 (0, 0, -yaw + 90);
 	}
 
 	void movement()
@@ -107,15 +116,19 @@ public class player_ctrl : MonoBehaviour {
 		//robot rotation left, rotates the base of the model and the forward code handles the actual movement
 		if (Input.GetKey (KeyCode.A)) {
 			transform.rotation *= Quaternion.Euler (new Vector3 (0f, -robotRotationSpeed, 0f));
+			//UIrobotBottomPos.transform.rotation *= Quaternion.Euler (new Vector3 (0f, 0f, robotRotationSpeed));
 			anim.SetInteger ("turning", 1);
 		}
 
 		//robot rotation right, rotates the base of the model and the forward code handles the actual movement
 		if (Input.GetKey (KeyCode.D)) {
 			transform.rotation *= Quaternion.Euler (new Vector3 (0f, robotRotationSpeed, 0f));
+			//UIrobotBottomPos.transform.rotation = new Vector3 (0f, 0f, transform.eulerAngles.y);
+			//UIrobotBottomPos.transform.rotation *= Quaternion.Euler (new Vector3 (0f, 0f, -robotRotationSpeed));
 			anim.SetInteger ("turning", -1);
 		}
 
+		UIrobotBottomPos.transform.eulerAngles = new Vector3 (0f, 0f, -transform.eulerAngles.y + 90);
 
 		//stop moving forward
 		if (Input.GetKeyUp (KeyCode.W)) {
@@ -133,6 +146,8 @@ public class player_ctrl : MonoBehaviour {
 		if (Input.GetKeyUp (KeyCode.D)) {
 			anim.SetInteger ("turning", 0);
 		}
+
+		transform.eulerAngles = new Vector3 (0f, transform.eulerAngles.y, 0f);
 	}
 
 	void jump()
@@ -174,7 +189,7 @@ public class player_ctrl : MonoBehaviour {
 			//add force to rigidbody
 			rigid.AddForce (Vector3.up * 12000);
 			//do fuel calculation
-			jetPackFuel -= 10;
+			jetPackFuel -= 12;
 
 
 			jetPackFlames (true);
@@ -188,6 +203,16 @@ public class player_ctrl : MonoBehaviour {
 
 			jetPackFlames (false);
 		}
+
+		if(jetPackBar != null) {
+			
+			jetPackBar.value = calculateJetFuel ();
+		}
+	}
+
+	float calculateJetFuel()
+	{
+		return jetPackFuel / jetPackFuelMax;
 	}
 
 	void jetPackFlames(bool onoff)
