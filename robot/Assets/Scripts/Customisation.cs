@@ -12,10 +12,15 @@ public class Customisation : MonoBehaviour {
 	public List<GameObject> bodyParts = new List<GameObject>();
 	public List<Transform> bodyLocators = new List<Transform>();
 
+	public List<GameObject> gunMounts = new List<GameObject>();
+	public Transform mountsLocation;
+
+	public List<int> mountGunIndexes = new List<int> ();
 
 	public int currentBodyIndex = 0;
 	public int currentTopLegIndex = 0;
 	public int currentBottomLegIndex = 0;
+	public int currentMountIndex = 0;
 
 	// Use this for initialization
 	void Start () {
@@ -23,9 +28,7 @@ public class Customisation : MonoBehaviour {
 		changePart(topLegLocators, topLegParts[PlayerPrefs.GetInt("armour_top_leg")]);
 		changePart(bodyLocators, bodyParts[PlayerPrefs.GetInt("armour_body")]);
 		changePart(bottomLegLocators, bottomLegParts[PlayerPrefs.GetInt("armour_bottom_leg")]);
-
-
-
+		changeMounting ();
 	}
 	
 	// Update is called once per frame
@@ -79,6 +82,38 @@ public class Customisation : MonoBehaviour {
 		PlayerPrefs.SetInt ("armour_bottom_leg", currentBottomLegIndex);
 	}
 
+	public void mountClick(int dir) {
+		currentMountIndex = changeIndex (dir, gunMounts.Count, currentMountIndex);
+		PlayerPrefs.SetInt ("mount_number", currentMountIndex);
+		changeMounting ();
+	}
+
+	void changeGun(int dir, int gunIndex) {
+		GameObject mounting = GameObject.Find("mounting");
+		GunController weapons = mounting.GetComponentInChildren<GunController> ();
+
+		int currentGunIndex = changeIndex (dir, weapons.weapons.Count, PlayerPrefs.GetInt ("gun" + gunIndex));
+
+		PlayerPrefs.SetInt ("gun" + gunIndex, currentGunIndex);
+
+		changeMounting ();
+	}
+
+	public void changeGun0(int dir)
+	{
+		changeGun (dir, 0);
+	}
+
+	public void changeGun1(int dir)
+	{
+		changeGun (dir, 1);
+	}
+
+	public void changeGun2(int dir)
+	{
+		changeGun (dir, 2);
+	}
+
 	int changeIndex(int direction, int max, int currentIndex) {
 
 		Debug.Log ("index: " + currentIndex);
@@ -124,9 +159,7 @@ public class Customisation : MonoBehaviour {
 
 
 		}
-
-
-
+			
 		// to_delete.ForEach (child => Destroy (child));
 
 		var count = 0;
@@ -149,8 +182,23 @@ public class Customisation : MonoBehaviour {
 			// return new_part;
 
 		}
-
-
-		
 	}
+
+	void changeMounting(){
+		foreach(Transform insideChild in mountsLocation) {
+			Destroy(insideChild.gameObject);
+		}
+			
+		GameObject new_part = Instantiate (gunMounts[PlayerPrefs.GetInt("mount_number")]) as GameObject;
+		new_part.transform.position = mountsLocation.position;
+
+		new_part.transform.parent = mountsLocation;
+		new_part.transform.localRotation = mountsLocation.localRotation;
+
+		GunController ctr = new_part.GetComponent<GunController> ();
+		//ctr.isAllowedToFire = true;
+		ctr.initialise ();
+	}
+
+
 }

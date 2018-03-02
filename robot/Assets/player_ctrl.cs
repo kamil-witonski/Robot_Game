@@ -9,7 +9,9 @@ public class player_ctrl : MonoBehaviour {
 	public int movementSpeed = 2;
 	public float robotRotationSpeed;
 	public float aimSpeed = 1f;
+    public float animationSpeed = 1f;
 	public int jumpSpeed;
+    public int dashSpeed = 50;
 
 	//object used for displaying the rotation
 	public Transform objectToAim;
@@ -60,7 +62,20 @@ public class player_ctrl : MonoBehaviour {
 		aiming ();
 
 		jetPack ();
+
+        dashing();
 	}
+
+    void dashing()
+    {
+        //implement dashing
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            transform.position += (transform.rotation * Vector3.left) * dashSpeed * 0.5f;
+            jetPackFuel = 10;
+
+        }
+    }
 
 	void aiming()
 	{
@@ -81,7 +96,7 @@ public class player_ctrl : MonoBehaviour {
 		//apply the calculation to the acutal object
 		objectToAim.transform.eulerAngles = new Vector3 (0, yaw, finalPitch * -1);
 
-		Debug.Log ("YAW" + yaw);
+		//Debug.Log ("YAW" + yaw);
 
 		UIrobotPos.transform.eulerAngles = new Vector3 (0, 0, -yaw + 90);
 	}
@@ -90,13 +105,15 @@ public class player_ctrl : MonoBehaviour {
 	{
 		int moveSpeed = movementSpeed;
 
-		anim.speed = 1f;
+		anim.speed = animationSpeed;
 
 		//handle sprinting
 		if (Input.GetKey (KeyCode.LeftShift)) {
-			anim.speed = 3f;
+			anim.speed = 3.5f;
 			moveSpeed = movementSpeed + 5;
 		}
+
+      
 
 		//movement forward
 		if (Input.GetKey (KeyCode.W)) {
@@ -185,9 +202,9 @@ public class player_ctrl : MonoBehaviour {
 	void jetPack()
 	{
 		//get button press for jetpack and check that there is some fuel
-		if (Input.GetKey (KeyCode.V) && jetPackFuel > 0) {
+		if (Input.GetKey (KeyCode.V) && jetPackFuel > 10) {
 			//add force to rigidbody
-			rigid.AddForce (Vector3.up * 12000);
+			rigid.AddForce (Vector3.up * 8000);
 			//do fuel calculation
 			jetPackFuel -= 12;
 

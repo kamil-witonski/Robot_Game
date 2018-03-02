@@ -24,9 +24,8 @@ public class GunController : MonoBehaviour {
 
 	private float nextFire = 0;
 
-	// Use this for initialization
-	void Start () {
-		//add machine gun
+	public void initialise() {
+
 
 		// loop over the weapons list and load them up
 		for(var i = 0; i < numberOfGuns; i++) {
@@ -34,7 +33,8 @@ public class GunController : MonoBehaviour {
 			var pairs = new List<Gun>();
 
 			foreach(Transform child in locations[i]) {
-				GameObject obj = (GameObject) Instantiate(weapons[i], child.transform.position, child.transform.rotation);
+
+				GameObject obj = (GameObject) Instantiate(weapons[PlayerPrefs.GetInt ("gun" + i)], child.transform.position, child.transform.rotation);
 
 				obj.transform.parent = child.transform;
 				obj.transform.localScale = new Vector3(5f, 5f, 5f);
@@ -43,12 +43,6 @@ public class GunController : MonoBehaviour {
 
 				// guns.Add(obj.GetComponent<Gun>());
 				pairs.Add(gun);
-
-				//gun.lookAtTarget = aimTarget;
-
-
-
-
 			}	
 
 			gunsTest.Add(pairs);
@@ -56,6 +50,15 @@ public class GunController : MonoBehaviour {
 
 
 		Debug.Log(gunsTest[0][0]);
+	}
+
+	// Use this for initialization
+	void Start () {
+		//add machine gun
+
+		initialise ();
+
+
 
 	}
 	
