@@ -9,16 +9,20 @@ public class Osprey : MonoBehaviour {
 	public int targetIndex = 0;
 	public float speed = 10;
 
+	public Transform load_locationl;
+
 	public float distanceToNextTarget;
 
 	private Rigidbody rigi;
 	private AudioSource audio;
 
+	private Vector3 lookAdjust = new Vector3 (0f, 90f, 0f);
+
 	// Use this for initialization
 	void Start () {
 		load.transform.parent = this.transform;
 		load.transform.position = this.transform.position;
-		load.transform.position = new Vector3(load.transform.position.x, load.transform.position.y - 5, load.transform.position.z);
+		load.transform.position = new Vector3(load_locationl.position.x, load_locationl.position.y, load_locationl.position.z);
 		rigi = load.GetComponent<Rigidbody>();
 		rigi.useGravity = false;
 
@@ -43,13 +47,31 @@ public class Osprey : MonoBehaviour {
 		}
 	}
 
+	void LateUpdate()
+	{
+
+	}
+
 	void MoveTowards(Transform target) {
 		Vector3 targetDirection = target.position - transform.position;
 		float movingspeed = speed * Time.deltaTime;
 		transform.position = Vector3.MoveTowards(transform.position, target.position, speed);
 
-		Vector3 rotatDir = Vector3.RotateTowards(transform.position, targetDirection, movingspeed, 0.0f);
-		transform.rotation = Quaternion.LookRotation(rotatDir);
+		//Vector3 rotatDir = Vector3.RotateTowards(transform.position, targetDirection, movingspeed, 0.0f);
+		//transform.rotation = Quaternion.LookRotation(rotatDir);
+
+		//Vector3 rotatata = new Vector3 (0f, -180f, 0f);
+
+		//transform.LookAt (target.position);
+
+		var lookdir = Quaternion.LookRotation (target.position);
+		lookdir *= Quaternion.Euler (lookAdjust);
+
+		transform.rotation = Quaternion.Slerp (transform.rotation, lookdir, Time.deltaTime * 0.5f);
+
+//		transform.rotation 
+
+		//transform.localRotation = Quaternion.Euler (rotatata);
 
 		distanceToNextTarget = Vector3.Distance(target.position, transform.position);
 	}
@@ -68,6 +90,7 @@ public class Osprey : MonoBehaviour {
 			yield return new WaitForSeconds(4.0f);
 
 			targetIndex = 1;
+			lookAdjust = new Vector3 (0f, 270f, 0f);
 			// Debug.Log("FLY AWAY");
 			test = false;
 		}
