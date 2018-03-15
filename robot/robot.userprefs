@@ -6,14 +6,17 @@
       <File FileName="Assets\enemy_patrol.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\ForceField.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\GunController.cs" Line="29" Column="1" />
-      <File FileName="Assets\player_ctrl.cs" Line="99" Column="5" />
-      <File FileName="Assets\Scripts\Gun.cs" Line="12" Column="30" />
-      <File FileName="Assets\Scripts\tarining_mission\shooting_range_trigger.cs" Line="7" Column="2" />
-      <File FileName="Assets\Scripts\tarining_mission\training_mission.cs" Line="87" Column="17" />
-      <File FileName="Assets\Scripts\tarining_mission\training_target.cs" Line="16" Column="23" />
-      <File FileName="Assets\Scripts\Customisation.cs" Line="199" Column="5" />
-      <File FileName="Assets\Scripts\tarining_mission\jet_pack_trigger.cs" Line="17" Column="37" />
+      <File FileName="Assets\Scripts\GunController.cs" Line="1" Column="1" />
+      <File FileName="Assets\player_ctrl.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Gun.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\tarining_mission\shooting_range_trigger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\tarining_mission\training_mission.cs" Line="55" Column="32" />
+      <File FileName="Assets\Scripts\tarining_mission\training_target.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Customisation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\tarining_mission\jet_pack_trigger.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\turretAim.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\helicopter.cs" Line="21" Column="66" />
+      <File FileName="Assets\Scripts\MoveTo.cs" Line="19" Column="90" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

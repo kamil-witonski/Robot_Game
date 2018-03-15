@@ -58,6 +58,7 @@
      <Compile Include="Assets\Scripts\Gun.cs" />
      <Compile Include="Assets\Scripts\GunController.cs" />
      <Compile Include="Assets\Scripts\MachineGun.cs" />
+     <Compile Include="Assets\Scripts\MoveTo.cs" />
      <Compile Include="Assets\Scripts\Osprey.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PointAt.cs" />
@@ -67,10 +68,13 @@
      <Compile Include="Assets\Scripts\RadioManager.cs" />
      <Compile Include="Assets\Scripts\SceneSwitch.cs" />
      <Compile Include="Assets\Scripts\Tank.cs" />
+     <Compile Include="Assets\Scripts\helicopter.cs" />
+     <Compile Include="Assets\Scripts\osprey_rotor.cs" />
      <Compile Include="Assets\Scripts\tarining_mission\jet_pack_trigger.cs" />
      <Compile Include="Assets\Scripts\tarining_mission\shooting_range_trigger.cs" />
      <Compile Include="Assets\Scripts\tarining_mission\training_mission.cs" />
      <Compile Include="Assets\Scripts\tarining_mission\training_target.cs" />
+     <Compile Include="Assets\Scripts\turretAim.cs" />
      <Compile Include="Assets\enemy_patrol.cs" />
      <Compile Include="Assets\player_ctrl.cs" />
      <Compile Include="Assets\player_shoot.cs" />
