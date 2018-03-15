@@ -14,6 +14,7 @@ public class enemy_patrol : MonoBehaviour {
 	public float rotationSpeed = 2.0f;
 
 	public bool isAttack = false;
+	public bool preventEvade = false;
 
 	private GameObject player;
 	private Transform evadingPosition;
@@ -49,7 +50,10 @@ public class enemy_patrol : MonoBehaviour {
 
 		//check if we in attack mode
 		if (isAttack) {
-			evadePositioning ();
+			if (!preventEvade) {
+				
+				evadePositioning ();
+			}
 			attackPlayer ();
 		} else {
 			patrol ();
