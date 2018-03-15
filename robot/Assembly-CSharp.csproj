@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\SceneSwitch.cs" />
      <Compile Include="Assets\Scripts\Tank.cs" />
      <Compile Include="Assets\Scripts\helicopter.cs" />
+     <Compile Include="Assets\Scripts\news_level\levelSwitcher.cs" />
      <Compile Include="Assets\Scripts\osprey_rotor.cs" />
      <Compile Include="Assets\Scripts\tarining_mission\jet_pack_trigger.cs" />
      <Compile Include="Assets\Scripts\tarining_mission\shooting_range_trigger.cs" />
@@ -78,6 +79,7 @@
      <Compile Include="Assets\enemy_patrol.cs" />
      <Compile Include="Assets\player_ctrl.cs" />
      <Compile Include="Assets\player_shoot.cs" />
+     <Compile Include="Assets\video\playVideo.cs" />
      <None Include="Assets\Effects\ForceField\Shader\ForceField.shader" />
      <None Include="Assets\Model\enviroment\ammo_pack\readme.txt" />
      <None Include="Assets\Model\enviroment\buildings\house_pack2\Textures\Please Read - Textures source.txt" />

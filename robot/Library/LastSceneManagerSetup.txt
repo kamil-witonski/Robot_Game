@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/news1.unity
+- path: Assets/training_area.unity
   isLoaded: 1
   isActive: 1
