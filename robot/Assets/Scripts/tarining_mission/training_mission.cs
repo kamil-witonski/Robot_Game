@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class training_mission : MonoBehaviour {
 
@@ -103,11 +104,21 @@ public class training_mission : MonoBehaviour {
 				//play sound
 				AudioSource.PlayClipAtPoint(train5, player.transform.position);
 
+				Invoke ("EndLevel", train5.length);
+
+				mission_status = 4;
 			}
 
 
 		}
 
 
+
+
+	}
+
+	public void EndLevel()
+	{
+		SceneManager.LoadScene ("news1", LoadSceneMode.Single);
 	}
 }
