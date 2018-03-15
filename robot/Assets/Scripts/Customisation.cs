@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Customisation : MonoBehaviour {
 	public List<GameObject> topLegParts = new List<GameObject>();
@@ -22,15 +23,46 @@ public class Customisation : MonoBehaviour {
 	public int currentBottomLegIndex = 0;
 	public int currentMountIndex = 0;
 
+	public GameObject armourSelector;
+	public GameObject legSelector;
+	public GameObject bottomLegSelector;
+
 	// Use this for initialization
 	void Start () {
+		
+		//load specific values based on the level we are in
+		checkLevels();
+
 		//build the robot
 		changePart(topLegLocators, topLegParts[PlayerPrefs.GetInt("armour_top_leg")]);
 		changePart(bodyLocators, bodyParts[PlayerPrefs.GetInt("armour_body")]);
 		changePart(bottomLegLocators, bottomLegParts[PlayerPrefs.GetInt("armour_bottom_leg")]);
 		changeMounting ();
 	}
-	
+
+	void checkLevels()
+	{
+		if (SceneManager.GetActiveScene ().name == "test_base") {
+			CheckUnlocks ();
+		}
+
+		if (SceneManager.GetActiveScene ().name == "training_area") {
+			PlayerPrefs.SetInt ("mount_number", 0);
+		}
+	}
+
+	void CheckUnlocks() {
+		if (PlayerPrefs.GetInt ("unlock_level") > 0) {
+			armourSelector.SetActive (true);
+		}
+
+		if (PlayerPrefs.GetInt ("unlock_level") > 1) {
+			legSelector.SetActive (true);
+			bottomLegSelector.SetActive (true);
+		}
+
+	}
+
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.T)) {
