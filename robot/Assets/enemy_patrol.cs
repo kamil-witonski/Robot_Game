@@ -68,6 +68,7 @@ public class enemy_patrol : MonoBehaviour {
 		//check if we within the attack range
 		if (distanceFromPlayer <= maxLookDistance) {
 			isAttack = true;
+			anim.SetLayerWeight (1, 1);
 
 			float randNumber = Random.Range (0f, 10f);
 			//get the evading position since we are in attack mode
