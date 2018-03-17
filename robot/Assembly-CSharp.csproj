@@ -69,6 +69,9 @@
      <Compile Include="Assets\Scripts\SceneSwitch.cs" />
      <Compile Include="Assets\Scripts\Tank.cs" />
      <Compile Include="Assets\Scripts\helicopter.cs" />
+     <Compile Include="Assets\Scripts\mission1\SwitchMissionState.cs" />
+     <Compile Include="Assets\Scripts\mission1\enemeyCheck.cs" />
+     <Compile Include="Assets\Scripts\mission1\mission1.cs" />
      <Compile Include="Assets\Scripts\news_level\levelSwitcher.cs" />
      <Compile Include="Assets\Scripts\osprey_rotor.cs" />
      <Compile Include="Assets\Scripts\tarining_mission\jet_pack_trigger.cs" />
