@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemy : Entity {
-	
+
+
+
 	// Use this for initialization
 	void Start () {
 		
@@ -16,6 +19,10 @@ public class Enemy : Entity {
 
 	public override void Die()
 	{
-		Destroy (gameObject);
+		Debug.Log ("JEA:LTH" + health);
+		//gameObject.SetActive (false);
+		this.GetComponent<enemy_patrol>().enabled = false;
+
+		//Destroy (gameObject);
 	}
 }
