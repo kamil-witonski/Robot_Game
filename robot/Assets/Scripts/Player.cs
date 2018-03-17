@@ -21,7 +21,7 @@ public class Player : Entity {
 
 	float CalculateHealth()
 	{
-		Debug.Log("healths:::" + (health / maxHealth));
+		//Debug.Log("healths:::" + (health / maxHealth));
 		return health/maxHealth;
 	}
 

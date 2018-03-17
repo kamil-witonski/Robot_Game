@@ -90,7 +90,7 @@ public class Customisation : MonoBehaviour {
 			changePart(bottomLegLocators, bottomLegParts[currentBottomLegIndex]);
 		}
 
-		Debug.Log(currentTopLegIndex);
+		//Debug.Log(currentTopLegIndex);
 	}
 
 	public void BodyArmourBtnClick(int dir) {
@@ -146,6 +146,8 @@ public class Customisation : MonoBehaviour {
 		changeGun (dir, 2);
 	}
 
+	//function used to cycle through lists using the int for current index
+	//max counter and the direction +1 or -1 to determnine what the next number in the index is going to be
 	int changeIndex(int direction, int max, int currentIndex) {
 
 		Debug.Log ("index: " + currentIndex);
@@ -168,6 +170,7 @@ public class Customisation : MonoBehaviour {
 		return currentIndex;
 	}
 
+	//finds the old part by the location transform and places a new part
 	void changePart(List<Transform> locators, Object newPart){
 		//find the chassis
 		// GameObject chassis = transform.Find ("Armature").gameObject;
@@ -204,7 +207,7 @@ public class Customisation : MonoBehaviour {
 			new_part.transform.parent = location;
 			new_part.transform.localRotation = Quaternion.Euler (-90, 0, 0);
 
-
+			//if this is the second pass in the function flip the part along its origin
 			if(count == 1) {
 				new_part.transform.localScale = new Vector3(new_part.transform.localScale.x, new_part.transform.localScale.y * -1, new_part.transform.localScale.z);
 			}
@@ -216,6 +219,7 @@ public class Customisation : MonoBehaviour {
 		}
 	}
 
+	//changes the mountig system and fills up with guns
 	void changeMounting(){
 		foreach(Transform insideChild in mountsLocation) {
 			Destroy(insideChild.gameObject);
