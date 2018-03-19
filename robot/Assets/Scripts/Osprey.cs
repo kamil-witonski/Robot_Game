@@ -43,7 +43,7 @@ public class Osprey : MonoBehaviour {
 
 		if(targetIndex == 1 && distanceToNextTarget < 5) {
 			// Debug.Log("Finished");
-			audio.Stop();
+		//	audio.Stop();
 		}
 	}
 
