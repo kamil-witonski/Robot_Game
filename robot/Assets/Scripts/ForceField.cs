@@ -56,7 +56,7 @@ public class ForceField : MonoBehaviour {
 
         if (!activated)
         {
-            if(!isScaling)
+			if(!isScaling && this.transform.localScale != minSize)
             {
                 StartCoroutine(ScaleOverTime(0.5f, minSize));
             }
