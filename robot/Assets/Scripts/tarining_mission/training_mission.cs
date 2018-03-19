@@ -33,6 +33,7 @@ public class training_mission : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		player = GameObject.FindWithTag ("Player");
+		PlayerPrefs.SetInt ("gun0", 0);
 
 		//play intro sound
 		AudioSource.PlayClipAtPoint (train1, player.transform.position);
@@ -119,6 +120,7 @@ public class training_mission : MonoBehaviour {
 
 	public void EndLevel()
 	{
+		PlayerPrefs.SetInt ("next_mission", 1);
 		SceneManager.LoadScene ("news1", LoadSceneMode.Single);
 	}
 }
