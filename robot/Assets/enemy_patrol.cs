@@ -33,6 +33,8 @@ public class enemy_patrol : MonoBehaviour {
 	private float evadeTime = 0f;
 	private float evadeInterval = 4f;
 
+	private int lookForPlayerLimiter = 0;
+
 	// Use this for initialization
 	void Start () {
 		transform.position = patrolPoints [0].position;
@@ -46,7 +48,13 @@ public class enemy_patrol : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
 	{
-		lookForPlayer ();
+
+		if (lookForPlayerLimiter > 30) {
+				
+			lookForPlayer ();
+
+			lookForPlayerLimiter = 0;
+		}
 
 		//check if we in attack mode
 		if (isAttack) {
@@ -58,6 +66,8 @@ public class enemy_patrol : MonoBehaviour {
 		} else {
 			patrol ();
 		}
+
+		lookForPlayerLimiter++;
 	}
 
 	void lookForPlayer()
@@ -135,8 +145,11 @@ public class enemy_patrol : MonoBehaviour {
 
 	void patrol()
 	{
+
+		float distanceToPoint = Vector3.Distance (transform.position, patrolPoints [currentPatrolPoint].position);
+
 		//check the distance to the next patrol point
-		if (Vector3.Distance (transform.position, patrolPoints [currentPatrolPoint].position) < 0.5f) {
+		if (distanceToPoint < 0.5f) {
 			currentPatrolPoint++;
 		}
 
@@ -148,7 +161,11 @@ public class enemy_patrol : MonoBehaviour {
 		//move towards the actual point
 		transform.position = Vector3.MoveTowards (transform.position, patrolPoints [currentPatrolPoint].position, moveSpeed * Time.deltaTime);
 		anim.SetBool ("is_walking", true);
-		StartCoroutine (TurnTowards (patrolPoints[currentPatrolPoint].position));
+
+		if (distanceToPoint > 3f && !preventEvade) {
+			StartCoroutine (TurnTowards (patrolPoints[currentPatrolPoint].position));
+		}
+
 	}
 
 	IEnumerator TurnTowards(Vector3 lookAtTarget) {
