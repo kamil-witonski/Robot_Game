@@ -16,6 +16,16 @@ public class SceneSwitch : MonoBehaviour {
 	}
 
 	public void switchScene(string secenName) {
-		SceneManager.LoadScene(secenName);
+
+		int mission = PlayerPrefs.GetInt ("next_mission");
+
+		if (mission == 1) {
+			SceneManager.LoadScene("city");
+		} else if (mission == 2) {
+			SceneManager.LoadScene("mission2");
+		}
+
+
+
 	}
 }
