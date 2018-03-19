@@ -4,11 +4,13 @@ using UnityEngine;
 
 public class SwitchMissionState : MonoBehaviour {
 
-	public mission1 mission1;
+	public mission mission_obj;
 
 	void OnTriggerEnter(Collider col) {
-		if (col.transform.tag == "Player") {
-			mission1.mission_state = 1;
+		if (col.transform.tag == "Player" && mission_obj.mission_state != 1) {
+			Debug.Log("we here");
+			mission_obj.mission_state = 1;
+			this.enabled = false;
 		}
 	}
 }

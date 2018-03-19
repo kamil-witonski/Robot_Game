@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-
-public class mission1 : mission {
+public class mission2 : mission {
 
 	public AudioClip state_audio1;
 	public AudioClip state_audio2;
@@ -16,7 +15,8 @@ public class mission1 : mission {
 	public GameObject osprey;
 
 	private Osprey osprey_script;
-	private bool audio2played = false;
+
+	private bool audio1BeenPLayed = false;
 
 	// Use this for initialization
 	void Start () {
@@ -28,22 +28,26 @@ public class mission1 : mission {
 		osprey_script = osprey.GetComponent<Osprey> ();
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-	
+
 		if (mission_state == 1) {
 			//show objectives
-			objective1Text.text = "Eliminate Enemies " + eneimies_killed.ToString() + "/10";
-		
-			if (eneimies_killed >= 10) {
-				mission_state = 2;
+			objective1Text.text = "Protect Asset " + eneimies_killed.ToString() + "/10";
 
-				if (!audio2played) {
-					audio_source.clip = state_audio2;
-					audio_source.Play ();
-					audio2played = true;
-				}
+
+			if (!audio1BeenPLayed) {
+				audio_source.clip = state_audio2;
+				audio_source.Play ();
+
+				audio1BeenPLayed = true;
+			}
+
+			if (eneimies_killed >= 10) {
+				audio_source.clip = state_audio3;
+				audio_source.Play ();
+				mission_state = 2;
 			}
 		}
 

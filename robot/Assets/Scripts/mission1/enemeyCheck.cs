@@ -5,7 +5,7 @@ using UnityEngine;
 public class enemeyCheck : MonoBehaviour {
 
 
-	public mission1 mission;
+	public mission mission_obj;
 	private Enemy enemy;
 
 	// Use this for initialization
@@ -15,11 +15,8 @@ public class enemeyCheck : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-		Debug.Log (enemy.health);
-
 		if (enemy.health <= 0) {
-			mission.eneimies_killed++;
+			mission_obj.eneimies_killed++;
 
 			Destroy (this);
 		}
