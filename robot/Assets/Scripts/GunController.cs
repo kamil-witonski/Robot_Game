@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GunController : MonoBehaviour {
 
@@ -25,6 +26,10 @@ public class GunController : MonoBehaviour {
 	private float nextFire = 0;
 
 	public void initialise() {
+
+		if (SceneManager.GetActiveScene ().ToString() == "training_area") {
+			PlayerPrefs.SetInt ("gun0", 0);
+		}
 
 
 		// loop over the weapons list and load them up
