@@ -39,6 +39,9 @@ public class training_mission : MonoBehaviour {
 		AudioSource.PlayClipAtPoint (train1, player.transform.position);
 		mission_text.text = "Proceed to the shooting range";
 		smoke.transform.position = smoke_loc1.transform.position;
+
+		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
 	}
 	
 	// Update is called once per frame

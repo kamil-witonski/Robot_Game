@@ -27,6 +27,9 @@ public class mission1 : mission {
 
 		osprey_script = osprey.GetComponent<Osprey> ();
 
+		Cursor.visible = false;
+		Cursor.lockState = CursorLockMode.Locked;
+
 	}
 	
 	// Update is called once per frame
