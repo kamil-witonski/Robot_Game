@@ -88,6 +88,8 @@
      <Compile Include="Assets\enemy_patrol.cs" />
      <Compile Include="Assets\player_ctrl.cs" />
      <Compile Include="Assets\player_shoot.cs" />
+     <Compile Include="Assets\setMissionNumber.cs" />
+     <Compile Include="Assets\test_base.cs" />
      <Compile Include="Assets\video\playVideo.cs" />
      <None Include="Assets\Effects\ForceField\Shader\ForceField.shader" />
      <None Include="Assets\Model\enviroment\ammo_pack\readme.txt" />
