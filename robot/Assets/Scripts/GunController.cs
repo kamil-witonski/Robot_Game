@@ -60,6 +60,15 @@ public class GunController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//add machine gun
+		string lvlName = SceneManager.GetActiveScene().name;
+
+		Debug.Log (lvlName);
+
+		if (lvlName == "test_base" || lvlName == "main_menu") {
+			isAllowedToFire = false;
+		} else {
+			isAllowedToFire = true;
+		}
 
 		initialise ();
 
