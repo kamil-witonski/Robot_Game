@@ -7,7 +7,7 @@ public class SceneSwitch : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame
@@ -19,7 +19,11 @@ public class SceneSwitch : MonoBehaviour {
 
 		int mission = PlayerPrefs.GetInt ("next_mission");
 
-		if (mission == 1) {
+		Debug.Log ("misison::" + mission);
+
+		if(mission == 0) {
+			SceneManager.LoadScene("training_area");
+		} else if (mission == 1) {
 			SceneManager.LoadScene("city");
 		} else if (mission == 2) {
 			SceneManager.LoadScene("mission2");
