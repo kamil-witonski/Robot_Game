@@ -48,9 +48,6 @@ public class player_ctrl : MonoBehaviour {
 	void Start () {
 		anim = gameObject.GetComponent<Animator> ();
 		rigid = gameObject.GetComponent<Rigidbody> ();
-
-		//Cursor.visible = false;
-		//Cursor.lockState = CursorLockMode.Locked;
 	}
 	
 	// Update is called once per frame
