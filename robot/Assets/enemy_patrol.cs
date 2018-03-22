@@ -5,6 +5,7 @@ using UnityEngine;
 public class enemy_patrol : MonoBehaviour {
 
 	public Transform[] patrolPoints;
+	public bool stopAtEnd;
 	private int currentPatrolPoint;
 	public float moveSpeed;
 
@@ -37,7 +38,11 @@ public class enemy_patrol : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		transform.position = patrolPoints [0].position;
+		//check if there are patrols to use
+		if(patrolPoints.Length != 0) {
+			transform.position = patrolPoints [0].position;
+		}
+
 		currentPatrolPoint = 0;
 		anim = GetComponent<Animator> ();
 
@@ -146,6 +151,10 @@ public class enemy_patrol : MonoBehaviour {
 	void patrol()
 	{
 
+		if (patrolPoints.Length == 0) {
+			return;
+		}
+
 		float distanceToPoint = Vector3.Distance (transform.position, patrolPoints [currentPatrolPoint].position);
 
 		//check the distance to the next patrol point
@@ -155,7 +164,13 @@ public class enemy_patrol : MonoBehaviour {
 
 		//check if there is anymore patrol points after this
 		if (currentPatrolPoint >= patrolPoints.Length) {
-			currentPatrolPoint = 0;
+			//check if the enmy should stop at end of the patrol route
+			if (stopAtEnd != true) {
+				currentPatrolPoint = 0;
+			} else {
+				currentPatrolPoint = patrolPoints.Length - 1;
+			}
+
 		}
 
 		//move towards the actual point
