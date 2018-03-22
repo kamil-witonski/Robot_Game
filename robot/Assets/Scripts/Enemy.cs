@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : Entity {
 
-
+	//private Rigidbody[] ragdoll_items =  new Rigidbody[13];
 
 	// Use this for initialization
 	void Start () {
@@ -17,12 +17,35 @@ public class Enemy : Entity {
 			
 	}
 
+	private void enemyDeath() {
+		this.GetComponent<enemy_patrol>().enabled = false;
+		this.GetComponent<Animator> ().enabled = false;
+
+		this.GetComponent<BoxCollider> ().enabled = false;
+	}
+
 	public override void Die()
 	{
-		Debug.Log ("JEA:LTH" + health);
-		//gameObject.SetActive (false);
-		this.GetComponent<enemy_patrol>().enabled = false;
+		enemyDeath ();
 
-		//Destroy (gameObject);
+		foreach(Rigidbody rig in this.GetComponentsInChildren<Rigidbody>()) {
+			rig.isKinematic = false;
+			rig.useGravity = true;
+		}
+
+	}
+
+	public override void Die(ExplosionData explosion)
+	{
+		enemyDeath ();
+
+		foreach(Rigidbody rig in this.GetComponentsInChildren<Rigidbody>()) {
+			rig.isKinematic = false;
+			rig.useGravity = true;
+
+			Debug.Log ("adding explosion");
+			rig.AddExplosionForce(explosion.getForce(), explosion.getPosition(), explosion.getRadius());
+		}
+
 	}
 }
