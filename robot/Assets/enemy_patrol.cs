@@ -36,6 +36,11 @@ public class enemy_patrol : MonoBehaviour {
 
 	private int lookForPlayerLimiter = 0;
 
+	private CharacterController charCtrl;
+
+	private AudioSource audio_source;
+	public AudioClip shoot_clip;
+
 	// Use this for initialization
 	void Start () {
 		//check if there are patrols to use
@@ -48,12 +53,16 @@ public class enemy_patrol : MonoBehaviour {
 
 		player = GameObject.FindWithTag ("Player");
 		evadingPosition = transform;
+
+		charCtrl = GetComponent<CharacterController> ();
+
+		audio_source = GetComponent<AudioSource> ();
 	}
 	
 	// Update is called once per frame
 	void Update ()
 	{
-
+		//add counting to improve performance
 		if (lookForPlayerLimiter > 30) {
 				
 			lookForPlayer ();
@@ -113,6 +122,8 @@ public class enemy_patrol : MonoBehaviour {
 
 		//add force to bullet to send it flying
 		bullet.GetComponent<Rigidbody> ().AddForce (direction * 155);
+		audio_source.clip = shoot_clip;
+		audio_source.Play ();
 		//destroy the bullet after 5 seconds
 		Destroy (bullet, 5.0f);
 	}
@@ -143,7 +154,17 @@ public class enemy_patrol : MonoBehaviour {
 
 			//check if the cooldown time between evading positions is reached and then move towards the next position
 			if ((Time.time - evadeTime) > evadeInterval) {
-				transform.position = Vector3.MoveTowards (transform.position, evadepos, moveSpeed * Time.deltaTime);
+				var direction = evadepos - transform.position;
+
+				var movement = direction.normalized * moveSpeed * Time.deltaTime;
+
+				if (movement.magnitude > direction.magnitude) {
+					movement = direction;
+				}
+
+				charCtrl.Move (movement);
+
+				//transform.position = Vector3.MoveTowards (transform.position, evadepos, moveSpeed * Time.deltaTime);
 			}
 		}
 	}
@@ -152,6 +173,7 @@ public class enemy_patrol : MonoBehaviour {
 	{
 
 		if (patrolPoints.Length == 0) {
+			anim.SetBool ("is_walking", false);
 			return;
 		}
 
@@ -167,6 +189,7 @@ public class enemy_patrol : MonoBehaviour {
 			//check if the enmy should stop at end of the patrol route
 			if (stopAtEnd != true) {
 				currentPatrolPoint = 0;
+				anim.SetBool ("is_walking", false);
 			} else {
 				currentPatrolPoint = patrolPoints.Length - 1;
 			}
@@ -174,8 +197,21 @@ public class enemy_patrol : MonoBehaviour {
 		}
 
 		//move towards the actual point
-		transform.position = Vector3.MoveTowards (transform.position, patrolPoints [currentPatrolPoint].position, moveSpeed * Time.deltaTime);
+		var direction = patrolPoints [currentPatrolPoint].position - transform.position;
+		var movement = direction.normalized * moveSpeed * Time.deltaTime;
+
+		if (movement.magnitude > direction.magnitude) {
+			movement = direction;
+		}
+
+		charCtrl.Move (movement);
+
 		anim.SetBool ("is_walking", true);
+
+		if (patrolPoints.Length == 1) {
+			anim.SetBool ("is_walking", false);
+		}
+
 
 		if (distanceToPoint > 3f && !preventEvade) {
 			StartCoroutine (TurnTowards (patrolPoints[currentPatrolPoint].position));

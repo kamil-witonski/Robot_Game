@@ -22,6 +22,7 @@ public class Enemy : Entity {
 		this.GetComponent<Animator> ().enabled = false;
 
 		this.GetComponent<BoxCollider> ().enabled = false;
+		this.GetComponent<CharacterController> ().enabled = false;
 	}
 
 	public override void Die()
