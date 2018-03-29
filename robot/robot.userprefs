@@ -1,22 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Customisation.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SceneSwitch.cs">
     <Files>
-      <File FileName="Assets\Scripts\tarining_mission\training_mission.cs" Line="44" Column="44" />
-      <File FileName="Assets\Scripts\Customisation.cs" Line="129" Column="58" />
-      <File FileName="Assets\Scripts\mission1\mission1end.cs" Line="10" Column="3" />
+      <File FileName="Assets\Scripts\tarining_mission\training_mission.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Customisation.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\mission1\mission1end.cs" Line="10" Column="1" />
       <File FileName="Assets\Scripts\mission2\mission2end.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\SceneSwitch.cs" Line="20" Column="50" />
-      <File FileName="Assets\Scripts\GunController.cs" Line="70" Column="27" />
-      <File FileName="Assets\Scripts\Player.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MachineGun.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Gun.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Bullet.cs" Line="1" Column="1" />
-      <File FileName="Assets\setMissionNumber.cs" Line="12" Column="41" />
-      <File FileName="Assets\player_ctrl.cs" Line="50" Column="49" />
-      <File FileName="Assets\Scripts\mission1\mission1.cs" Line="31" Column="44" />
-      <File FileName="Assets\Scripts\mission2\mission2.cs" Line="31" Column="44" />
-      <File FileName="Assets\test_base.cs" Line="7" Column="32" />
+      <File FileName="Assets\Scripts\SceneSwitch.cs" Line="23" Column="51" />
+      <File FileName="Assets\Scripts\mission2\mission2.cs" Line="64" Column="34" />
+      <File FileName="Assets\Scripts\mission_continue_button.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\mission1\mission1.cs" Line="60" Column="43" />
+      <File FileName="Assets\Scripts\mission1\mission_end.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

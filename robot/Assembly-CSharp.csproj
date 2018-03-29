@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\RadioManager.cs" />
      <Compile Include="Assets\Scripts\SceneSwitch.cs" />
      <Compile Include="Assets\Scripts\Tank.cs" />
+     <Compile Include="Assets\Scripts\death_screen.cs" />
      <Compile Include="Assets\Scripts\helicopter.cs" />
      <Compile Include="Assets\Scripts\mission.cs" />
      <Compile Include="Assets\Scripts\mission1\SwitchMissionState.cs" />
@@ -79,6 +80,7 @@
      <Compile Include="Assets\Scripts\mission1\mission_end.cs" />
      <Compile Include="Assets\Scripts\mission2\mission2.cs" />
      <Compile Include="Assets\Scripts\mission2\mission2end.cs" />
+     <Compile Include="Assets\Scripts\mission_continue_button.cs" />
      <Compile Include="Assets\Scripts\news_level\levelSwitcher.cs" />
      <Compile Include="Assets\Scripts\osprey_rotor.cs" />
      <Compile Include="Assets\Scripts\tarining_mission\jet_pack_trigger.cs" />
