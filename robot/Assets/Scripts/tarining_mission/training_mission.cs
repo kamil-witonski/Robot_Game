@@ -34,6 +34,7 @@ public class training_mission : MonoBehaviour {
 	void Start () {
 		player = GameObject.FindWithTag ("Player");
 		PlayerPrefs.SetInt ("gun0", 0);
+		PlayerPrefs.SetInt ("next_mission", 0);
 
 		//play intro sound
 		AudioSource.PlayClipAtPoint (train1, player.transform.position);

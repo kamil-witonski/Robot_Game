@@ -30,6 +30,8 @@ public class mission2 : mission {
 		Cursor.visible = false;
 		Cursor.lockState = CursorLockMode.Locked;
 
+		//mark current mission incase of death
+		PlayerPrefs.SetInt ("next_mission", 2);
 	}
 
 	// Update is called once per frame
@@ -60,18 +62,6 @@ public class mission2 : mission {
 
 			osprey_script.targets [0] = osprey_pickup;
 			osprey_script.targetIndex = 0;
-
-			//mission_state = 3;
-
-			//enable smoke
-
-			//enable ospray
-
-			//set the point of travel here
-
-			//fade out when it gets close
-
-			//load in the base and add uncloks
 		}
 	}
 }

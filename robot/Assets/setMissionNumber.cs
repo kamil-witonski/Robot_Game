@@ -6,7 +6,7 @@ public class setMissionNumber : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PlayerPrefs.SetInt ("next_mission", 0);
+		//PlayerPrefs.SetInt ("next_mission", 0);
 
 		Cursor.visible = true;
 		Cursor.lockState = CursorLockMode.None;
