@@ -15,19 +15,27 @@ public class SceneSwitch : MonoBehaviour {
 		
 	}
 
-	public void switchScene(string secenName) {
+	public void switchScene(string sceneName) {
 
-		int mission = PlayerPrefs.GetInt ("next_mission");
+		if (sceneName != "") {
+			SceneManager.LoadScene (sceneName);
+		} else {
+			int mission = PlayerPrefs.GetInt ("next_mission");
 
-		Debug.Log ("misison::" + mission);
+			Debug.Log ("misison::" + mission);
 
-		if(mission == 0) {
-			SceneManager.LoadScene("training_area");
-		} else if (mission == 1) {
-			SceneManager.LoadScene("city");
-		} else if (mission == 2) {
-			SceneManager.LoadScene("mission2");
+			if(mission == 0) {
+				SceneManager.LoadScene("training_area");
+			} else if (mission == 1) {
+				SceneManager.LoadScene("city");
+			} else if (mission == 2) {
+				SceneManager.LoadScene("mission2");
+			}
 		}
+
+
+
+
 
 
 
